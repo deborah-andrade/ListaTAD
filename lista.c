@@ -28,14 +28,13 @@ int get(Lista *l, int index) {
     return l->vet[index];
 }
 
-int remover(Lista *l, int index){
-    for (int i = 0; i < l->quant; i++){
-        for (int i = index; i < l->quant - 1; i++) {
+void remover(Lista *l, int index){
+        for (int i = index; i < l->quant - 1; i++){
         l->vet[i] = l->vet[i + 1];
     }
     l->quant--;
     }
-}
+
 
 void insert(Lista *l, int valor) {
     for (int i = l->quant - 1; i >= 0; i--) {
@@ -70,16 +69,21 @@ int full(Lista *l){
     if(l->quant == MAX){
         printf("\nA lista esta cheia!");
     }
+    return 0;
 }
 
 
 int empty(Lista *l){
     if (l->quant == 0){
         printf("\nA lista esta vazia!");
+        }
+    return 0;
     }
         
-}
 
+int size(Lista *l){
+    return l->quant;
+}
 
 void print(Lista *l){
         for (int i = 0; i < l->quant; i++) {
@@ -104,5 +108,4 @@ int main(){
     print(lista);
     printf("\nO valor do indice que deseja encontrar e: %d\n", get(lista, 2));
     full(lista);
-
 }
