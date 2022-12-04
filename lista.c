@@ -83,7 +83,7 @@ int empty(Lista *l){
 
 int size(Lista *l){
     int n = l->quant;
-    printf("A quantidade e: %d", n);
+    printf("\nA quantidade e: %d", n);
     return 0;
 }
 
