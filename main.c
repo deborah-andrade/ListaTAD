@@ -18,5 +18,5 @@ int main(){
     print(lista);
     printf("\nO valor do indice que deseja encontrar e: %d\n", get(lista, 2));
     full(lista);
-
+    size(lista);
 }
