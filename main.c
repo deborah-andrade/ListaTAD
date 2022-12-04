@@ -16,6 +16,9 @@ int main(){
     printf("\n");
     remover(lista, 4);
     print(lista);
+    insert_sort(lista, 6);
+    printf("\n");
+    print(lista);
     printf("\nO valor do indice que deseja encontrar e: %d\n", get(lista, 2));
     full(lista);
     size(lista);
